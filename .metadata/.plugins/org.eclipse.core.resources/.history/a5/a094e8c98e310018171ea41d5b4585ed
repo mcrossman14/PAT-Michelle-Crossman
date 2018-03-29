@@ -1,0 +1,56 @@
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JButton;
+
+public class Schedule {
+
+	private JFrame frame;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					Schedule window = new Schedule();
+					window.frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the application.
+	 */
+	public Schedule() {
+		initialize();
+	}
+
+	/**
+	 * Initialize the contents of the frame.
+	 */
+	private void initialize() {
+		frame = new JFrame();
+		frame.setBounds(100, 100, 450, 300);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.getContentPane().setLayout(null);
+		frame.setVisible(true);
+		
+		JButton btnAddSchedule = new JButton("Add Schedule");
+		btnAddSchedule.setBounds(10, 72, 107, 23);
+		frame.getContentPane().add(btnAddSchedule);
+		
+		JButton btnSporadic = new JButton("Sporadic");
+		btnSporadic.setBounds(10, 132, 107, 23);
+		frame.getContentPane().add(btnSporadic);
+		
+		JButton btnBack = new JButton("Back");
+		btnBack.setBounds(10, 11, 89, 23);
+		frame.getContentPane().add(btnBack);
+	}
+
+}
